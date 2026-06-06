@@ -1,0 +1,6 @@
+{
+  "name": "Windows 95 Retro OS Portfolio",
+  "description": "Atharva Khaire's personal portfolio styled as a classic Windows 95 operating system, featuring boot sequence, responsive draggable/resizable windows, custom paint, run command, and games.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

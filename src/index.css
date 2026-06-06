@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&family=MS+Sans+Serif&family=Share+Tech+Mono&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-cyber: "Share Tech Mono", monospace;
+  --font-retro: "Press Start 2P", monospace;
+  --font-terminal: "VT323", monospace;
+}
+
+/* Custom Base Styles */
+html, body {
+  background-color: #008080; /* Windows 95 Teal */
+  color: #000000;
+  font-family: "MS Sans Serif", "Tahoma", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  overflow: hidden;
+  user-select: none;
+  height: 100vh;
+  width: 100vw;
+}
+
+/* Scrollbar Vintage Style */
+::-webkit-scrollbar {
+  width: 16px;
+  height: 16px;
+}
+::-webkit-scrollbar-track {
+  background: #dfdfdf;
+  background-image: radial-gradient(#c0c0c0 25%, transparent 25%), radial-gradient(#c0c0c0 25%, transparent 25%);
+  background-size: 4px 4px;
+  background-position: 0 0, 2px 2px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #c0c0c0;
+  box-shadow: inset 1px 1px 0px #ffffff, inset -1px -1px 0px #5a5a5a, 1px 1px 0px #000000;
+  border-top: 1px solid #ffffff;
+  border-left: 1px solid #ffffff;
+  border-right: 1px solid #808080;
+  border-bottom: 1px solid #808080;
+}
+::-webkit-scrollbar-button {
+  display: block;
+  height: 12px;
+  width: 12px;
+  background-color: #c0c0c0;
+}
+
+/* Beveled Borders for Windows 95 Elements */
+.win95-outset {
+  box-shadow: inset 1.5px 1.5px 0px #ffffff, inset -1.5px -1.5px 0px #808080, 2px 2px 0px #000000;
+  border-top: 1px solid #ffffff;
+  border-left: 1px solid #ffffff;
+  border-right: 1px solid #808080;
+  border-bottom: 1px solid #808080;
+  background-color: #c0c0c0;
+}
+
+.win95-inset {
+  box-shadow: inset 1.5px 1.5px 0px #000000, inset -1.5px -1.5px 0px #ffffff, 0.5px 0.5px 0px #ffffff;
+  border-top: 1px solid #808080;
+  border-left: 1px solid #808080;
+  border-right: 1px solid #dfdfdf;
+  border-bottom: 1px solid #dfdfdf;
+  background-color: #ffffff;
+}
+
+.win95-inset-depressed {
+  box-shadow: inset 2px 2px 0px #000000;
+  border-top: 1px solid #808080;
+  border-left: 1px solid #808080;
+  border-right: 1px solid #ffffff;
+  border-bottom: 1px solid #ffffff;
+  background-color: #dfdfdf;
+}
+
+.win95-button {
+  box-shadow: inset 1px 1px 0px #ffffff, inset -1px -1px 0px #808080, 2px 2px 0px #000000;
+  border-top: 1.5px solid #ffffff;
+  border-left: 1.5px solid #ffffff;
+  border-right: 1.5px solid #808080;
+  border-bottom: 1.5px solid #808080;
+  background-color: #c0c0c0;
+  cursor: pointer;
+  outline: none;
+}
+
+.win95-button:active {
+  box-shadow: inset 1.5px 1.5px 0px #000000;
+  border-top: 1.5px solid #808080;
+  border-left: 1.5px solid #808080;
+  border-right: 1.5px solid #ffffff;
+  border-bottom: 1.5px solid #ffffff;
+  padding-top: 1px;
+  padding-left: 1px;
+}
+
+/* Win95 Window Titlebar active & inactive gradients */
+.win95-titlebar-active {
+  background: linear-gradient(90deg, #000080, #1084d0);
+  color: #ffffff;
+}
+
+.win95-titlebar-inactive {
+  background: #808080;
+  color: #c0c0c0;
+}
+
+/* Grid of icons styling */
+.desktop-grid {
+  grid-template-rows: repeat(auto-fill, minmax(80px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+}
+
+/* Classic Scanlines effect for the boot loader & terminal */
+.scanlines {
+  position: relative;
+  overflow: hidden;
+}
+.scanlines::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+  z-index: 20;
+  background-size: 100% 3px, 6px 100%;
+  pointer-events: none;
+}
+
+/* Retro CRT Vignette and Glow */
+.crt-screen {
+  animation: textShadow 1.6s infinite;
+}
+
+@keyframes textShadow {
+  0% { text-shadow: 0.5px 0 0 rgba(255,0,0,0.5), -0.5px 0 0 rgba(0,255,0,0.5); }
+  50% { text-shadow: -0.5px 0 0 rgba(255,0,0,0.5), 0.5px 0 0 rgba(0,255,0,0.5); }
+  100% { text-shadow: 0.5px 0 0 rgba(255,0,0,0.5), -0.5px 0 0 rgba(0,255,0,0.5); }
+}
+
+/* Custom check patterns */
+.win95-pattern {
+  background-color: #008080;
+  background-image: radial-gradient(rgba(0,0,0,0.15) 15%, transparent 15%), radial-gradient(rgba(255,255,255,0.05) 15%, transparent 15%);
+  background-size: 4px 4px;
+}
